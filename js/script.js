@@ -51,7 +51,12 @@ let checkOrder = () =>{
         }
     }
     if(clickedOrder.length == order.length){
-        alert(`Pontuação: ${score}\n Você acertou! Iniciando próximo nível!`);
+        // alert(`Pontuação: ${score}\n Você acertou! Iniciando próximo nível!`);
+        Swal.fire({
+            icon: 'success',
+            title: 'Você ganhou!',
+            text: `Pontuação : ${score} !  Iniciando próximo nível!`,
+          })
         nextlevel();
     }
 }
@@ -95,14 +100,19 @@ let click = (color) =>{
  // Função para game over
 
  let gameOver = () =>{
-     alert(`Pontuação: ${score}!\n Você perdeu o jogo!\n Clique em OK para iniciar um novo jogo`);
+    //  alert(`Pontuação: ${score}!\n Você perdeu o jogo!\n Clique em OK para iniciar um novo jogo`);
+     Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: `Você perdeu \n Pontuação : ${score} ! \n Clique em OK para iniciar um novo jogo !`,
+      })
      order = [];
     clickedOrder =[];
     playGame();
  }
 
  let playGame = () =>{
-    Swal.fire('Bem vindo ao GM-GENIUS!!')
+    // Swal.fire('Bem vindo ao GM-GENIUS!!')
     score = 0;
     
     nextlevel();
