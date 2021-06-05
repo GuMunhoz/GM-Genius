@@ -1,4 +1,4 @@
-# GM-Genius
+#🎮GM-Genius
   <img src="./img/GM Genius.gif.gif" width = 1200px> 
 
 
